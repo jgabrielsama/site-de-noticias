@@ -37,7 +37,7 @@ function App() {
               <Homepage attribute={false} artigos={artigos} loading={loading} />
             }
           />
-          <Route path="/:pagina" element={<NoticiaCompleta />} />
+          <Route path="/:pagina" element={<NoticiaCompleta artigos={artigos} />} />
         </Routes>
       </BrowserRouter>
     </div>

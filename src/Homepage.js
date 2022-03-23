@@ -13,7 +13,7 @@ function App({ loading, artigos }) {
             abstract,
             headline: { main },
             multimedia,
-            document_type,
+            word_count,
           } = artigo;
           // const imagem = `https://www.nytimes.com/${multimedia[0].url}`;
           return (
@@ -22,7 +22,7 @@ function App({ loading, artigos }) {
                 {/* <CardImg alt={imagem} src={imagem} width="5px" /> */}
                 <CardBody>
                   <CardTitle tag="h5">
-                    <NavLink href={main}>{main}</NavLink>
+                    <NavLink href={word_count}>{main}</NavLink>
                   </CardTitle>
                   {/* <CardSubtitle className="mb-2 text-muted" tag="h6">
                     {abstract}
