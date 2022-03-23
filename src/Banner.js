@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Navbar,
-  NavbarBrand,
   NavbarToggler,
   Collapse,
   Nav,
@@ -22,9 +21,7 @@ export default function Banner() {
     <div>
       <Navbar color="dark" expand="md" dark>
         <Link style={{ textDecoration: "none" }} to="/">
-          <NavbarBrand>
-            <img src={iconeDeNoticias} width="37" alt="" srcset="" />
-          </NavbarBrand>
+          <img src={iconeDeNoticias} width="37" alt="icone" />
         </Link>
         <NavbarToggler onClick={function noRefCheck() {}} />
         <Collapse navbar>
@@ -36,7 +33,7 @@ export default function Banner() {
               <DropdownToggle caret nav>
                 Options
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>Option 1</DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
