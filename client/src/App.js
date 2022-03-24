@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
 import Banner from "./Banner";
 import NoticiaCompleta from "./NoticiaCompleta";
+import Contato from "./Contato";
 
 function App() {
   const [artigos, setArtigos] = useState([]);
@@ -38,6 +39,7 @@ function App() {
             }
           />
           <Route path="/:pagina" element={<NoticiaCompleta artigos={artigos} />} />
+          <Route path="/contato" element={<Contato />} />
         </Routes>
       </BrowserRouter>
     </div>
