@@ -2,12 +2,13 @@ import React from "react";
 import { Card, CardBody, CardTitle, CardText, Spinner } from "reactstrap";
 
 import { NavLink } from "reactstrap";
+import banner from "./Minimalist Black Friday Promotional Discount Banner.gif";
 
 function App({ loading, artigos }) {
   return (
     <div>
       {loading ? (
-        artigos.map(artigo => {
+        artigos.map((artigo, i) => {
           const {
             _id,
             abstract,
@@ -16,6 +17,14 @@ function App({ loading, artigos }) {
           } = artigo;
           return (
             <div key={_id}>
+              {i === 4 ? (
+                <img
+                  style={{ margin: "15px" }}
+                  width="50%"
+                  src={banner}
+                  alt="banner"
+                />
+              ) : null}
               <Card style={{ width: "45em", margin: "15px" }}>
                 <CardBody>
                   <CardTitle tag="h5">

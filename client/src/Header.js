@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 import iconeDeNoticias from "./noticias.png";
 
-export default function Banner() {
+export default function Header() {
   return (
     <div>
       <Navbar color="dark" expand="md" dark>

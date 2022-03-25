@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Homepage from "./Homepage";
-import Banner from "./Banner";
+import Header from "./Header";
 import NoticiaCompleta from "./NoticiaCompleta";
 import Contato from "./Contato";
 
@@ -30,7 +30,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Banner />
+        <Header />
         <Routes>
           <Route
             path="/"
