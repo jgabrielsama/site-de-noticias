@@ -18,10 +18,16 @@ export default function Contato() {
         email,
         menssagem,
       },
+    }).then(res => {
+      if (res.data.errors) {
+        // console.log(res.data.errors[0].msg);
+        setAlerta(res.data.errors[0].msg);
+      } else {
+        // console.log(res.data.msg);
+        setAlerta(res.data.msg);
+      }
     });
-    setAlerta(true);
   };
-
   return (
     <div style={{ width: "45em", margin: "15px" }}>
       <form onSubmit={submit}>
@@ -52,7 +58,7 @@ export default function Contato() {
         />
         <br />
         <Button type="submit">Enviar</Button>
-        {alerta ? <p>Menssagem enviada!</p> : null}
+        {alerta ? <p>{alerta}</p> : null}
       </form>
     </div>
   );

@@ -3,10 +3,7 @@
 >- Aplicação web feita com React.js e Node.js;
 >- Não usei nenhum arquivo CSS e usei o mínimo de inline CSS;
 >- O API não retorna a notícia, apenas a fonte dela;
->- O servidor não manda e-mail, apenas responde com o status 200 e faz log dos dados no terminal.
-
-
-
+>- O servidor não manda e-mail, apenas responde com o status 200 e o JSON dos dados, faz a validação e log dos dados no terminal.
 
 # Getting Started with Create React App
 
