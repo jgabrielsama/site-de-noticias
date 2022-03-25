@@ -23,10 +23,11 @@ export default function Contato() {
   };
 
   return (
-    <div>
+    <div style={{ width: "45em", margin: "15px" }}>
       <form onSubmit={submit}>
         <input
           onChange={e => setNome(e.target.value)}
+          type="text"
           name="nome"
           placeholder="Nome"
           id="nome"
@@ -34,6 +35,7 @@ export default function Contato() {
         <br />
         <input
           onChange={e => setEmail(e.target.value)}
+          type="email"
           name="email"
           placeholder="Email"
           id="email"
@@ -41,6 +43,7 @@ export default function Contato() {
         <br />
         <textarea
           onChange={e => setMenssagem(e.target.value)}
+          type="text"
           placeholder="Menssagem"
           name="menssagem"
           id="menssagem"

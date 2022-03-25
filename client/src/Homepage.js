@@ -18,12 +18,11 @@ function App({ loading, artigos }) {
           return (
             <div key={_id}>
               {i === 4 ? (
-                <img
-                  style={{ margin: "15px" }}
-                  width="50%"
-                  src={banner}
-                  alt="banner"
-                />
+                <div style={{ margin: "15px" }}>
+                  <a href="/">
+                    <img width="50%" src={banner} alt="banner" />
+                  </a>
+                </div>
               ) : null}
               <Card style={{ width: "45em", margin: "15px" }}>
                 <CardBody>

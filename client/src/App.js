@@ -47,3 +47,5 @@ function App() {
 }
 
 export default App;
+
+console.log("%c Feito com dedicação", "color: cyan");
