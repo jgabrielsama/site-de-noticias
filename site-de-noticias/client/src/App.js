@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Homepage from "./Homepage";
-import Header from "./Header";
-import NoticiaCompleta from "./NoticiaCompleta";
-import Contato from "./Contato";
+import Homepage from "./components/Homepage";
+import Header from "./components/Header";
+import NoticiaCompleta from "./components/NoticiaCompleta";
+import Contato from "./components/Contato";
 
 function App() {
   const [artigos, setArtigos] = useState([]);
@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -38,14 +38,18 @@ function App() {
               <Homepage attribute={false} artigos={artigos} loading={loading} />
             }
           />
-          <Route path="/:pagina" element={<NoticiaCompleta artigos={artigos} />} />
+          <Route
+            path="/noticia/:pagina"
+            element={<NoticiaCompleta artigos={artigos} />}
+          />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/*" element={<h1>Página não encontrada</h1>} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
 export default App;
 
-console.log("%c Feito com dedicação", "color: cyan");
+console.log("%c Feito com dedicação ❤️", "color: cyan");

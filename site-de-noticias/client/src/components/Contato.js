@@ -19,13 +19,11 @@ export default function Contato() {
         menssagem,
       },
     }).then(res => {
-      if (res.data.errors) {
+      if (res.data.errors)
         // console.log(res.data.errors[0].msg);
         setAlerta(res.data.errors[0].msg);
-      } else {
-        // console.log(res.data.msg);
-        setAlerta(res.data.msg);
-      }
+      // console.log(res.data.msg);
+      else setAlerta(res.data.msg);
     });
   };
   return (

@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import iconeDeNoticias from "./noticias.png";
+import iconeDeNoticias from "../assets/noticias.png";
 
 export default function Header() {
   return (

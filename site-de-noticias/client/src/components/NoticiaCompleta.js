@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Spinner } from "reactstrap";
-import banner from "./Minimalist Black Friday Promotional Discount Banner.gif";
+
+import Banner from "./Banner";
 
 export default function NoticiaCompleta({ artigos }) {
   const [artigo, setArtigo] = useState();
   const param = parseInt(useParams().pagina);
-
+  // console.log(param);
   useEffect(() => {
     setArtigo(artigos.find(e => e.word_count === param));
   }, [artigos, param]);
@@ -14,7 +15,7 @@ export default function NoticiaCompleta({ artigos }) {
   return (
     <div>
       {artigo ? (
-        <div style={{ margin: "2rem" }}>
+        <div style={{ margin: "15px" }}>
           <h1>{artigo.headline.main}</h1>
           <h5>{artigo.abstract}</h5>
           <img
@@ -37,12 +38,7 @@ export default function NoticiaCompleta({ artigos }) {
             consequuntur quos molestiae reprehenderit? Nostrum quas numquam ipsum
             rerum odit commodi ipsa deleniti, excepturi sapiente distinctio?
           </p>
-          <hr />
-          <div style={{ margin: "15px" }}>
-            <a href="/">
-              <img width="50%" src={banner} alt="banner" />
-            </a>
-          </div>
+          <Banner />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate
             natus reprehenderit ratione perferendis blanditiis! Non et, sunt suscipit

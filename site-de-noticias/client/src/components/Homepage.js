@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, CardBody, CardTitle, CardText, Spinner } from "reactstrap";
-
 import { NavLink } from "reactstrap";
-import banner from "./Minimalist Black Friday Promotional Discount Banner.gif";
+
+import Banner from "./Banner";
 
 function App({ loading, artigos }) {
   return (
@@ -16,18 +16,12 @@ function App({ loading, artigos }) {
             word_count,
           } = artigo;
           return (
-            <div key={_id}>
-              {i === 4 ? (
-                <div style={{ margin: "15px" }}>
-                  <a href="/">
-                    <img width="50%" src={banner} alt="banner" />
-                  </a>
-                </div>
-              ) : null}
-              <Card style={{ width: "45em", margin: "15px" }}>
+            <div key={_id} style={{ margin: "15px" }}>
+              {i === 4 ? <Banner /> : null}
+              <Card style={{ width: "45em" }}>
                 <CardBody>
                   <CardTitle tag="h5">
-                    <NavLink href={word_count}>{main}</NavLink>
+                    <NavLink href={`/noticia/${word_count}`}>{main}</NavLink>
                   </CardTitle>
                   <CardText>{abstract}</CardText>
                 </CardBody>
